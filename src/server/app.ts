@@ -1,10 +1,16 @@
+import "dotenv/config";
 import express from "express";
+import chalk from "chalk";
+import debugCreator from "debug";
 
-const app = express();
+export const app = express();
+const debug = debugCreator("src:server:app");
+
+app.disable("x-powered-by");
 
 export const startServer = (port: number) => {
   app.listen(port, () => {
-    // Mensaje para cuando se ha levantado 👋
+    debug(chalk.green(`Listening on http://localhost:${port}`));
   });
 };
 
