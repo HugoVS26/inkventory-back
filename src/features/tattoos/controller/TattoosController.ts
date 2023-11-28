@@ -5,7 +5,7 @@ class TattoosController {
   constructor(private readonly tattoosRepository: TattoosRepository) {}
 
   getTattoos = async (_req: Request, res: Response) => {
-    const tattoos = this.tattoosRepository.getTattoos();
+    const tattoos = await this.tattoosRepository.getTattoos();
     res.status(200).json({ tattoos });
   };
 }

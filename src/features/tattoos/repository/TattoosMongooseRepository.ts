@@ -1,4 +1,4 @@
-import Tattoos from "../model/Tattoos";
+import Tattoos from "../model/Tattoos.js";
 import { type TattooStructure } from "../types";
 import { type TattoosRepository } from "./types";
 
