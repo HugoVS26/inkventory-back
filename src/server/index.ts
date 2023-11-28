@@ -8,11 +8,13 @@ import {
   notFound,
 } from "./middlewares/errors/errorsMiddleware.js";
 import pingRouter from "../features/ping/router/pingRouter.js";
+import tattoosRouter from "../features/tattoos/router/tattoosRouter.js";
 
 app.use(morgan("dev"));
 app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get("/", pingRouter);
+app.use("/tattoos", tattoosRouter);
 app.use(notFound);
 app.use(generalError);
