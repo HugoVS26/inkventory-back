@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import "./server/index";
 import { MongoMemoryServer } from "mongodb-memory-server";
 import { connectToDatabase } from "./database";
 
