@@ -1,7 +1,7 @@
 import debugCreator from "debug";
 import { type NextFunction, type Request, type Response } from "express";
 import chalk from "chalk";
-import CustomError from "./CustomError/CustomError.js";
+import CustomError from "../../CustomError/CustomError.js";
 
 const debug = debugCreator("src:server:middleware:error:errorsMiddleware");
 
