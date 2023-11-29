@@ -6,7 +6,7 @@ beforeEach(() => {
   jest.clearAllMocks();
 });
 
-describe("Given a generalError middleware", () => {
+describe("Given a generalError function", () => {
   const request = {};
   const response: Pick<Response, "status" | "json"> = {
     status: jest.fn().mockReturnThis(),
@@ -14,7 +14,7 @@ describe("Given a generalError middleware", () => {
   };
   const next = jest.fn();
 
-  describe("When it receives a response and a 400 error", () => {
+  describe("When it receives a response as a parameter and a status code 400 ", () => {
     test("Then it should call the response method with status code 400", () => {
       const expectedStatusCode = 400;
       const error = new CustomError("error", expectedStatusCode);
@@ -25,7 +25,7 @@ describe("Given a generalError middleware", () => {
     });
   });
 
-  describe("When it receives a response and an error with the message `Unknown Error`", () => {
+  describe("When it receives a response as a parameter and an error message `Unknown Error`", () => {
     test("Then it should call the response method  json with a `Unknown Error` message ", () => {
       const errorMessage = "Unknown Error";
       const error = new CustomError(errorMessage, 400);
@@ -40,7 +40,7 @@ describe("Given a generalError middleware", () => {
     });
   });
 
-  describe("When it receives a response and an error without status code", () => {
+  describe("When it receives a response as a parameter and an error without a status code", () => {
     test("Then it should call the response's method with status code 500 ", () => {
       const expectedStatusCode = 500;
       const error = new Error("Error without status code");
