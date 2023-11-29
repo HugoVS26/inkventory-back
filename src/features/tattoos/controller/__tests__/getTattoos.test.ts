@@ -14,7 +14,7 @@ describe("Given the method getTattoos in TattooController", () => {
       json: jest.fn(),
     };
 
-    test("then it should call status with 200 as a Code", async () => {
+    test("then it should call response's status method with 200 as a Code", async () => {
       const expectedCode = 200;
       const tattooController = new TattoosController(tattooMockRepository);
 
@@ -23,7 +23,7 @@ describe("Given the method getTattoos in TattooController", () => {
       expect(res.status).toHaveBeenCalledWith(expectedCode);
     });
 
-    test("then it should call json with MissSita's and Nissaco's tattoos", async () => {
+    test("then it should call the responses's json method with MissSita's and Nissaco's tattoos", async () => {
       const expectedMessage = { tattoos: tattoosMock };
       const tattoosController = new TattoosController(tattooMockRepository);
 
