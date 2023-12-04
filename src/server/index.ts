@@ -10,8 +10,8 @@ import {
 import pingRouter from "../features/ping/router/pingRouter.js";
 import tattoosRouter from "../features/tattoos/router/tattoosRouter.js";
 
-app.use(morgan("dev"));
 app.use(cors(corsOptions));
+app.use(morgan("dev"));
 app.use(express.json());
 
 app.get("/", pingRouter);
