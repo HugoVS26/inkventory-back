@@ -1,7 +1,4 @@
+const frontUrl = process.env.FRONT_URL!;
 export const corsOptions = {
-  origin: [
-    process.env.FRONT_URL!,
-    "http://localhost:5173",
-    "http://localhost:4000",
-  ],
+  origin: [frontUrl, "http://localhost:5173", "http://localhost:4000"],
 };
