@@ -1,0 +1,55 @@
+{
+  "info": {
+    "_postman_id": "1268de7a-d9a3-4a35-8a31-59cd6c69f080",
+    "name": "Inkventory",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30615041"
+  },
+  "item": [
+    {
+      "name": "ping",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": [""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "notFound",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/wrong",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["wrong"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tattoos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/tattoos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["tattoos"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
