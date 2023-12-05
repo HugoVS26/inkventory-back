@@ -6,12 +6,11 @@ module.exports = {
   testMatch: ["**/src/**/*.test.ts"],
   resolver: "jest-ts-webcompat-resolver",
   collectCoverageFrom: [
-    "src//*.{ts, tsx}",
-    "!node_modules/",
+    "**/*.ts",
     "!src/index.ts",
-    "!/types.ts",
-    "!src/setupTests.ts",
     "!src/server/app.ts",
     "!src/database/index.ts",
+    "!src/setupTest.ts",
+    "!**/node_modules/**",
   ],
 };
