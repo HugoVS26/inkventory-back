@@ -7,6 +7,7 @@ describe("Given the method getTattoos in TattooController", () => {
   describe("When it is call with a Response as a parameter", () => {
     const tattooMockRepository: TattoosRepository = {
       getTattoos: jest.fn().mockReturnValue(tattoosMock),
+      deleteTattoo: jest.fn(),
     };
     const req = {};
     const res: Pick<Response, "status" | "json"> = {

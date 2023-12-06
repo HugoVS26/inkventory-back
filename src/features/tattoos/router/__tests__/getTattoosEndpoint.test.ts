@@ -1,5 +1,6 @@
 import request from "supertest";
 import app from "../../../../server/app";
+import "../../../../server/index";
 import { type TattooStructure } from "../../types";
 import Tattoo from "../../model/Tattoos";
 import tattoosMock from "../../mocks/tattoosMock";
