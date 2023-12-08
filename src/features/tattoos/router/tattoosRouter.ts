@@ -8,5 +8,6 @@ const tattoosRouter = Router();
 
 tattoosRouter.get("/", tattoosController.getTattoos);
 tattoosRouter.delete("/delete/:id", tattoosController.deleteTattoo);
+tattoosRouter.post("/add", tattoosController.addTattoo);
 
 export default tattoosRouter;

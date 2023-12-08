@@ -14,8 +14,8 @@ app.use(cors(corsOptions));
 app.use(morgan("dev"));
 app.use(express.json());
 
-app.get("/", pingRouter);
 app.use("/tattoos", tattoosRouter);
+app.get("/", pingRouter);
 
 app.use(notFound);
 app.use(generalError);
