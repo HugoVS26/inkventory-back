@@ -36,7 +36,7 @@ const tattooSchema = new mongoose.Schema<TattooStructure>({
   },
   isFavorite: {
     type: Boolean,
-    required: true,
+    required: false,
   },
 });
 
