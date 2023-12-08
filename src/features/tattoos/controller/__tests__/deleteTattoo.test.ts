@@ -8,7 +8,7 @@ beforeEach(() => {
   jest.clearAllMocks();
 });
 
-describe("Given the method deleteTattoo in TattooController", () => {
+describe("Given the method deleteTattoo in TattoosController", () => {
   const res: Pick<Response, "status" | "json"> = {
     status: jest.fn().mockReturnThis(),
     json: jest.fn(),
@@ -16,7 +16,7 @@ describe("Given the method deleteTattoo in TattooController", () => {
 
   const next = jest.fn();
 
-  describe("When it is call with a Request as a parameter with a correct tattoo id", () => {
+  describe("When it's called with a Request as a parameter with a correct tattoo id", () => {
     const tattooId = "6564db84aa515e7823b31e58";
 
     const req: Partial<Request> = {
@@ -26,6 +26,7 @@ describe("Given the method deleteTattoo in TattooController", () => {
     const tattooMockRepository: TattoosRepository = {
       getTattoos: jest.fn(),
       deleteTattoo: jest.fn(),
+      addTattoo: jest.fn(),
     };
 
     const tattoosController = new TattoosController(tattooMockRepository);
@@ -66,6 +67,7 @@ describe("Given the method deleteTattoo in TattooController", () => {
       const tattooMockRepository: TattoosRepository = {
         getTattoos: jest.fn(),
         deleteTattoo: jest.fn().mockRejectedValue(expectedError),
+        addTattoo: jest.fn(),
       };
 
       const req: Partial<Request> = {

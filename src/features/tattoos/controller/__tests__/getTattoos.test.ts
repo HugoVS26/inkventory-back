@@ -8,6 +8,7 @@ describe("Given the method getTattoos in TattooController", () => {
     const tattooMockRepository: TattoosRepository = {
       getTattoos: jest.fn().mockReturnValue(tattoosMock),
       deleteTattoo: jest.fn(),
+      addTattoo: jest.fn(),
     };
     const req = {};
     const res: Pick<Response, "status" | "json"> = {
