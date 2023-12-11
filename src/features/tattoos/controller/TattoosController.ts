@@ -38,6 +38,22 @@ class TattoosController {
       next(error);
     }
   };
+
+  public getTattooById = async (
+    req: Request<{ tattooId: string }>,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    const { tattooId } = req.params;
+
+    try {
+      const tattoo = await this.tattoosRepository.getTattooById(tattooId);
+
+      res.status(200).json({ tattoo });
+    } catch (error) {
+      next(error);
+    }
+  };
 }
 
 export default TattoosController;
