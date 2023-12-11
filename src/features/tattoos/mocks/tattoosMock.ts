@@ -2,7 +2,7 @@ import { type TattooStructure } from "../types";
 
 const tattoosMock: TattooStructure[] = [
   {
-    _id: "6564db84aa515e7823b31e58",
+    _id: "6571a7dd81f419ec2f6fc541",
     artist: "Toni Donaire",
     email: "tattoodonaire@gmail.com",
     instagram: "@tdonaire",
