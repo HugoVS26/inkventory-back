@@ -7,7 +7,7 @@ import tattoosMock from "../../mocks/tattoosMock";
 
 describe("Given a GET /tattoos endpoint", () => {
   describe("When it receives a request", () => {
-    test("Then it should respond with status code 200 with MissSita's and Nissaco's tattoos in the response's body", async () => {
+    test("Then it should respond with status code 200 with 'Toni Donaire's and Nissaco's tattoos in the response's body", async () => {
       const path = "/tattoos";
       const expectedStatusCode = 200;
 
