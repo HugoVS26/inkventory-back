@@ -65,6 +65,38 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "addTattoo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"artist\": \"prueba\",\n  \"email\": \"hello.misssita@gmail.com\",\n  \"instagram\": \"@misssita\",\n  \"city\": \"Barcelona\",\n  \"style\": \"blackwork\",\n  \"image\": \"https://i.ibb.co/W2DBhvK/miss-Sita-tattoo-1.webp\",\n  \"notes\": \"Ask to review the fan tattoo \",\n  \"isFavorite\": true,\n  \"direction\": \"https://www.google.com/maps/dir//109+tattoo+barcelona/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x12a4a2fa4f62e835:0xede092fc03c85d0?sa=X&ved=2ahUKEwjZ7OSj3OSCAxW2TKQEHaiVDSwQ9Rd6BAhAEAA\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/tattoos/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["tattoos", "add"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getTattooById",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
     }
   ]
 }
