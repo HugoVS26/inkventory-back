@@ -28,6 +28,7 @@ describe("Given the method deleteTattoo in TattoosController", () => {
       deleteTattoo: jest.fn(),
       addTattoo: jest.fn(),
       getTattooById: jest.fn(),
+      modifyTattoo: jest.fn(),
     };
 
     const tattoosController = new TattoosController(tattooMockRepository);
@@ -70,6 +71,7 @@ describe("Given the method deleteTattoo in TattoosController", () => {
         deleteTattoo: jest.fn().mockRejectedValue(expectedError),
         addTattoo: jest.fn(),
         getTattooById: jest.fn(),
+        modifyTattoo: jest.fn(),
       };
 
       const req: Partial<Request> = {
