@@ -97,6 +97,30 @@
         "header": []
       },
       "response": []
+    },
+    {
+      "name": "modifyTattoo",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"tattoodonaire@hotmail.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/tattoos/6571a7dd81f419ec2f6fc541",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["tattoos", "6571a7dd81f419ec2f6fc541"]
+        }
+      },
+      "response": []
     }
   ]
 }

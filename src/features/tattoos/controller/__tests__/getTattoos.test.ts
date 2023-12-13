@@ -10,6 +10,7 @@ describe("Given the method getTattoos in TattooController", () => {
       deleteTattoo: jest.fn(),
       addTattoo: jest.fn(),
       getTattooById: jest.fn(),
+      modifyTattoo: jest.fn(),
     };
     const req = {};
     const res: Pick<Response, "status" | "json"> = {

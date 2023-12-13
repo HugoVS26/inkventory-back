@@ -12,7 +12,7 @@ describe("Given a GET method '/tattoos/:id' endpoint", () => {
     const tattooIdMock = tattoosMock[0]._id;
     const path = `/tattoos/${tattooIdMock.toString()}`;
 
-    test("Then it should responds with the bike that corresponds to that id", async () => {
+    test("Then it should responds with the tattoo that corresponds to that id", async () => {
       const expectedMessage = "The tattoo has been created succesfully";
 
       await Tattoos.create(tattoooMock);
