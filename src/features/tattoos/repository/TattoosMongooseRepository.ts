@@ -39,6 +39,23 @@ class TattoosMongooseRepository implements TattoosRepository {
       throw new CustomError("Couldn't find the tattoo", 404);
     }
   }
+
+  public async modifyTattoo(
+    id: string,
+    tattoo: TattooStructure,
+  ): Promise<TattooStructure | undefined> {
+    try {
+      const modifiedTattoo = await Tattoos.findByIdAndUpdate(
+        id,
+        { ...tattoo },
+        { returnDocument: "after" },
+      );
+
+      return modifiedTattoo!;
+    } catch (error) {
+      throw new Error("Error modifying the tattoo" + (error as Error).message);
+    }
+  }
 }
 
 export default TattoosMongooseRepository;
