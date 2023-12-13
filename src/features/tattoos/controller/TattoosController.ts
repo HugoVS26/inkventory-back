@@ -1,6 +1,10 @@
 import { type NextFunction, type Request, type Response } from "express";
 import { type TattoosRepository } from "../repository/types";
-import { type TattooRequestWithoutId } from "../types";
+import {
+  type TattooRequestWithId,
+  type TattooRequestWithoutId,
+} from "../types";
+import CustomError from "../../../server/CustomError/CustomError.js";
 
 class TattoosController {
   constructor(private readonly tattoosRepository: TattoosRepository) {}
@@ -52,6 +56,28 @@ class TattoosController {
       res.status(200).json({ tattoo });
     } catch (error) {
       next(error);
+    }
+  };
+
+  modifyTattoo = async (
+    req: TattooRequestWithId,
+    res: Response,
+    next: NextFunction,
+  ): Promise<void> => {
+    try {
+      const tattoo = req.body;
+      const { tattooId } = req.params;
+
+      const modifiedTattoo = await this.tattoosRepository.modifyTattoo(
+        tattooId,
+        tattoo,
+      );
+
+      res.status(200).json({ tattoo: modifiedTattoo });
+    } catch (error) {
+      const customError = new CustomError("Couldn't modify the tattoo.", 400);
+
+      next(customError);
     }
   };
 }
