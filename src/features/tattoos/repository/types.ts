@@ -5,4 +5,8 @@ export interface TattoosRepository {
   deleteTattoo: (id: string) => Promise<void>;
   addTattoo: (tattoo: TattooStructureWithoutId) => Promise<TattooStructure>;
   getTattooById: (id: string) => Promise<TattooStructure>;
+  modifyTattoo: (
+    id: string,
+    tattoo: TattooStructure,
+  ) => Promise<TattooStructure | undefined>;
 }

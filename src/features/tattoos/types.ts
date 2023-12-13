@@ -21,4 +21,10 @@ export type TattooRequestWithoutId = Request<
   TattooStructureWithoutId
 >;
 
+export type TattooRequestWithId = Request<
+  { tattooId: string },
+  Record<string, unknown>,
+  TattooStructure
+>;
+
 export type TattooRequestById = Request<{ tattooId: string }>;
