@@ -5,7 +5,7 @@ import { type TattoosRepository } from "./types";
 
 class TattoosMongooseRepository implements TattoosRepository {
   public async getTattoos(): Promise<TattooStructure[]> {
-    const tattoos = await Tattoos.find({}).lean().limit(10).sort({ _id: -1 });
+    const tattoos = await Tattoos.find({}).lean().limit(9).sort({ _id: -1 });
 
     return tattoos;
   }
