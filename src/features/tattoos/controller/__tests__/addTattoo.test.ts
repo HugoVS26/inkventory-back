@@ -11,6 +11,7 @@ describe("Given the method addTattoo in TattoosController", () => {
     addTattoo: jest.fn().mockResolvedValue(tattoosMock[0]),
     getTattooById: jest.fn(),
     modifyTattoo: jest.fn(),
+    modifyIsFavorite: jest.fn(),
   };
 
   const req: Pick<TattooRequestWithoutId, "body"> = {
@@ -63,6 +64,7 @@ describe("Given the method addTattoo in TattoosController", () => {
         addTattoo: jest.fn().mockRejectedValue(expectedErrorMessage),
         getTattooById: jest.fn(),
         modifyTattoo: jest.fn(),
+        modifyIsFavorite: jest.fn(),
       };
 
       const tattoosController = new TattoosController(tattoosRepository);

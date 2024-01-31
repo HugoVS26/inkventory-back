@@ -56,6 +56,27 @@ class TattoosMongooseRepository implements TattoosRepository {
       throw new Error("Error modifying the tattoo" + (error as Error).message);
     }
   }
+
+  public async modifyIsFavorite(
+    tattooId: string,
+    isFavorite: boolean,
+  ): Promise<void | TattooStructure> {
+    try {
+      const response = await Tattoos.findByIdAndUpdate(
+        tattooId,
+        {
+          isFavorite,
+        },
+        { returnDocument: "after" },
+      );
+
+      return response!;
+    } catch (error) {
+      throw new Error(
+        "Error adding this tattoo as favorite" + (error as Error).message,
+      );
+    }
+  }
 }
 
 export default TattoosMongooseRepository;

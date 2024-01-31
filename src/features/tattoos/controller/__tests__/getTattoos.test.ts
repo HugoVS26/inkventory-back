@@ -11,6 +11,7 @@ describe("Given the method getTattoos in TattooController", () => {
       addTattoo: jest.fn(),
       getTattooById: jest.fn(),
       modifyTattoo: jest.fn(),
+      modifyIsFavorite: jest.fn(),
     };
     const req = {};
     const res: Pick<Response, "status" | "json"> = {
