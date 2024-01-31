@@ -3,6 +3,7 @@ import { type TattoosRepository } from "../repository/types";
 import {
   type TattooRequestWithId,
   type TattooRequestWithoutId,
+  type UpdateTattooRequest,
 } from "../types";
 import CustomError from "../../../server/CustomError/CustomError.js";
 
@@ -76,6 +77,31 @@ class TattoosController {
       res.status(200).json({ tattoo: modifiedTattoo });
     } catch (error) {
       const customError = new CustomError("Couldn't modify the tattoo.", 400);
+
+      next(customError);
+    }
+  };
+
+  public modifyIsFavorite = async (
+    req: UpdateTattooRequest,
+    res: Response,
+    next: NextFunction,
+  ): Promise<void> => {
+    const { _id, isFavorite } = req.body;
+
+    try {
+      const response = await this.tattoosRepository.modifyIsFavorite(
+        _id,
+        isFavorite,
+      );
+
+      res.status(200).json({ response });
+    } catch (error) {
+      const customError = new CustomError(
+        "Error updating favorite state",
+        400,
+        (error as Error).message,
+      );
 
       next(customError);
     }

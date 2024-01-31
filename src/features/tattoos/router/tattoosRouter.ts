@@ -11,4 +11,6 @@ tattoosRouter.delete("/delete/:id", tattoosController.deleteTattoo);
 tattoosRouter.post("/add", tattoosController.addTattoo);
 tattoosRouter.get("/:tattooId", tattoosController.getTattooById);
 tattoosRouter.patch("/:tattooId", tattoosController.modifyTattoo);
+tattoosRouter.patch("/", tattoosController.modifyIsFavorite);
+
 export default tattoosRouter;

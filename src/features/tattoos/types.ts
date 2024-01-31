@@ -28,3 +28,9 @@ export type TattooRequestWithId = Request<
 >;
 
 export type TattooRequestById = Request<{ tattooId: string }>;
+
+export type UpdateTattooRequest = Request<
+  Record<string, unknown>,
+  Record<string, unknown>,
+  { _id: string; isFavorite: boolean }
+>;

@@ -9,4 +9,8 @@ export interface TattoosRepository {
     id: string,
     tattoo: TattooStructure,
   ) => Promise<TattooStructure | undefined>;
+  modifyIsFavorite: (
+    id: string,
+    isFavorite: boolean,
+  ) => Promise<TattooStructure | void>;
 }
