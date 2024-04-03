@@ -1,8 +1,8 @@
 # INKVENTORY
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=HugoVS26_inkventory-back&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=HugoVS26_inkventory-back)
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=HugoVS26_inkventory-back)](https://sonarcloud.io/summary/overall?id=HugoVS26_inkventory-back)
 
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=HugoVS26_inkventory-back)](https://sonarcloud.io/summary/new_code?id=HugoVS26_inkventory-back)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=HugoVS26_inkventory-back&metric=coverage)](https://sonarcloud.io/summary/overall?id=HugoVS26_inkventory-back)
 
 ## Technologies Used
 
